@@ -10,7 +10,7 @@ export default function App() {
 
   return (
     <div style={{ padding: 40, fontFamily: "Arial, sans-serif" }}>
-      <h1>Stripe Payment Gateway</h1>
+      <h1>Stripe Payment Gateway New Updated for pipeline</h1>
       <p>React 19 + Sequelize v7 + Stripe Checkout</p>
       <PaymentForm />
     </div>
