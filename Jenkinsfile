@@ -28,7 +28,7 @@ pipeline {
             steps {
                 echo 'Executing Frontend Component Tests...'
                 // CI=true prevents the test terminal from hanging in interactive mode
-                bat 'env CI=true npm test -- --passWithNoTests'
+                bat 'set CI=true&& npm test -- --passWithNoTests'
             }
         }
 
