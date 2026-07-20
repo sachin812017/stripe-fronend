@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo 'Installing Frontend UI Packages...'
                 // Run 'bat' instead of 'sh' if you are on Windows
-                bat 'npm ci'
+                bat 'npm install'
             }
         }
 
