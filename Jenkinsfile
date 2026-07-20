@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo 'Installing Frontend UI Packages...'
                 // Run 'bat' instead of 'sh' if you are on Windows
-                sh 'npm ci'
+                bat 'npm ci'
             }
         }
 
@@ -28,14 +28,14 @@ pipeline {
             steps {
                 echo 'Executing Frontend Component Tests...'
                 // CI=true prevents the test terminal from hanging in interactive mode
-                sh 'env CI=true npm test -- --passWithNoTests'
+                bat 'env CI=true npm test -- --passWithNoTests'
             }
         }
 
         stage('Build Production Bundle') {
             steps {
                 echo 'Compiling Static React Production Files...'
-                sh 'npm run build'
+                bat 'npm run build'
             }
         }
     }
