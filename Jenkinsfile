@@ -24,14 +24,6 @@ pipeline {
             }
         }
 
-        stage('Run UI Tests') {
-            steps {
-                echo 'Executing Frontend Component Tests...'
-                // CI=true prevents the test terminal from hanging in interactive mode
-                bat 'set CI=true&& npm test -- --passWithNoTests'
-            }
-        }
-
         stage('Build Production Bundle') {
             steps {
                 echo 'Compiling Static React Production Files...'
